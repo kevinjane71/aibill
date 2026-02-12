@@ -191,42 +191,229 @@
         </div>
 
         <div class="card">
+            <h2><span class="emoji">🔑</span> Login Methods & What We Access</h2>
+            <p>You can sign in to Together using one of three methods. Here's exactly what information we receive from each:</p>
+
+            <h3>Sign in with Apple</h3>
+            <table class="data-table">
+                <tr>
+                    <th>Data We Receive</th>
+                    <th>Your Control</th>
+                </tr>
+                <tr>
+                    <td>Apple User ID (unique identifier)</td>
+                    <td>Always provided</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>You can choose to hide your email (Apple provides a relay address)</td>
+                </tr>
+                <tr>
+                    <td>Name (first & last)</td>
+                    <td>You can edit before sharing</td>
+                </tr>
+            </table>
+            <div class="highlight">
+                <p>Apple Sign-In is the most private option. You can hide your real email, and Apple doesn't track your app usage.</p>
+            </div>
+
+            <h3>Sign in with Google (Gmail)</h3>
+            <table class="data-table">
+                <tr>
+                    <th>Data We Receive</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Google User ID</td>
+                    <td>Unique identifier for your account</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>Account identification & communication</td>
+                </tr>
+                <tr>
+                    <td>Display Name</td>
+                    <td>Show your name in the app</td>
+                </tr>
+                <tr>
+                    <td>Profile Photo URL</td>
+                    <td>Display your profile picture (optional)</td>
+                </tr>
+            </table>
+            <p><strong>We do NOT access:</strong> Your Gmail emails, Google Drive, Calendar, Contacts, or any other Google services.</p>
+
+            <h3>Sign in with Phone Number</h3>
+            <table class="data-table">
+                <tr>
+                    <th>Data We Receive</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>Account identification & verification</td>
+                </tr>
+                <tr>
+                    <td>SMS Verification Code</td>
+                    <td>One-time verification (not stored)</td>
+                </tr>
+            </table>
+            <p>Phone authentication is handled securely by Firebase. We store your phone number to identify your account but never share it with third parties.</p>
+        </div>
+
+        <div class="card">
             <h2><span class="emoji">📱</span> Information We Collect</h2>
 
             <h3>Information You Provide</h3>
             <table class="data-table">
                 <tr>
                     <th>Data Type</th>
+                    <th>What We Store</th>
                     <th>Purpose</th>
                 </tr>
                 <tr>
-                    <td>Name & Email</td>
-                    <td>Account creation and authentication</td>
+                    <td><strong>Profile Info</strong></td>
+                    <td>Name, email, profile photo</td>
+                    <td>Display your identity in the app</td>
                 </tr>
                 <tr>
-                    <td>Partner Connection</td>
-                    <td>Link you with your partner in the app</td>
+                    <td><strong>Partner Connection</strong></td>
+                    <td>Partner's user ID, connection date</td>
+                    <td>Link you with your partner</td>
                 </tr>
                 <tr>
-                    <td>Mood Data</td>
-                    <td>Track and share moods with your partner</td>
+                    <td><strong>Mood Entries</strong></td>
+                    <td>Mood type, optional note, timestamp</td>
+                    <td>Share how you feel with your partner</td>
                 </tr>
                 <tr>
-                    <td>Drawings & Messages</td>
-                    <td>Share creative content with your partner</td>
+                    <td><strong>Love Wall Drawings</strong></td>
+                    <td>Drawing paths, colors, canvas data</td>
+                    <td>Save and sync your shared drawings</td>
                 </tr>
                 <tr>
-                    <td>Journey Locations</td>
-                    <td>Save special places you've been together</td>
+                    <td><strong>Journey Places</strong></td>
+                    <td>Place name, type, date, coordinates, notes</td>
+                    <td>Map your special locations together</td>
+                </tr>
+                <tr>
+                    <td><strong>Love Garden</strong></td>
+                    <td>Garden growth level, activities</td>
+                    <td>Track your relationship growth</td>
                 </tr>
             </table>
 
             <h3>Information Collected Automatically</h3>
+            <table class="data-table">
+                <tr>
+                    <th>Data Type</th>
+                    <th>What We Collect</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><strong>Device Info</strong></td>
+                    <td>Device type, OS version, app version</td>
+                    <td>Ensure app compatibility & debug issues</td>
+                </tr>
+                <tr>
+                    <td><strong>Push Tokens</strong></td>
+                    <td>Device notification token</td>
+                    <td>Send you notifications from your partner</td>
+                </tr>
+                <tr>
+                    <td><strong>App Usage</strong></td>
+                    <td>Features used, screen views</td>
+                    <td>Improve app experience</td>
+                </tr>
+                <tr>
+                    <td><strong>Crash Reports</strong></td>
+                    <td>Error logs, stack traces</td>
+                    <td>Fix bugs and improve stability</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2><span class="emoji">📦</span> Local Storage & Cache</h2>
+            <p>Together stores some data locally on your device to provide a faster, offline-capable experience:</p>
+
+            <h3>What We Cache & Why</h3>
+            <table class="data-table">
+                <tr>
+                    <th>Cached Data</th>
+                    <th>Why We Need It</th>
+                    <th>Storage Duration</th>
+                </tr>
+                <tr>
+                    <td><strong>Your Profile</strong></td>
+                    <td>Display your info without internet delay</td>
+                    <td>Until you log out</td>
+                </tr>
+                <tr>
+                    <td><strong>Partner Info</strong></td>
+                    <td>Show partner details offline</td>
+                    <td>Until you disconnect</td>
+                </tr>
+                <tr>
+                    <td><strong>Recent Moods</strong></td>
+                    <td>View mood history without loading</td>
+                    <td>Last 30 days</td>
+                </tr>
+                <tr>
+                    <td><strong>Canvas Drawing</strong></td>
+                    <td>Load your Love Wall instantly</td>
+                    <td>Until updated</td>
+                </tr>
+                <tr>
+                    <td><strong>Journey Places</strong></td>
+                    <td>View your map pins offline</td>
+                    <td>Until updated</td>
+                </tr>
+                <tr>
+                    <td><strong>Auth Tokens</strong></td>
+                    <td>Keep you logged in securely</td>
+                    <td>Until expiry or logout</td>
+                </tr>
+            </table>
+
+            <div class="highlight">
+                <p>All cached data is stored securely on your device only. Clearing the app's cache or logging out removes this local data.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="emoji">🔒</span> Permissions We Request</h2>
+            <p>Together requests minimal permissions. Here's what each permission does:</p>
+
+            <table class="data-table">
+                <tr>
+                    <th>Permission</th>
+                    <th>When Asked</th>
+                    <th>What We Use It For</th>
+                </tr>
+                <tr>
+                    <td><strong>Push Notifications</strong></td>
+                    <td>First app launch</td>
+                    <td>Notify you when your partner shares moods, drawings, or updates</td>
+                </tr>
+                <tr>
+                    <td><strong>Internet Access</strong></td>
+                    <td>Always required</td>
+                    <td>Sync data with your partner in real-time</td>
+                </tr>
+            </table>
+
+            <h3>Permissions We DON'T Request</h3>
             <ul>
-                <li><strong>Device Information:</strong> Device type, operating system version</li>
-                <li><strong>Usage Data:</strong> Features used, app interactions</li>
-                <li><strong>Push Notification Tokens:</strong> To send you notifications</li>
+                <li><strong>Camera:</strong> Not accessed (we don't take photos)</li>
+                <li><strong>Photo Library:</strong> Not accessed (we don't upload images)</li>
+                <li><strong>Location:</strong> Not accessed (Journey places are added manually via map)</li>
+                <li><strong>Microphone:</strong> Not accessed (no voice features)</li>
+                <li><strong>Contacts:</strong> Not accessed (partner connection via invite code)</li>
             </ul>
+
+            <div class="highlight">
+                <p>We believe in minimal permissions. Together only asks for what's absolutely necessary to function.</p>
+            </div>
         </div>
 
         <div class="card">
@@ -253,18 +440,66 @@
             <h3>With Your Partner</h3>
             <p>Content you create (moods, drawings, journey locations) is shared with your connected partner. This is the core feature of the app.</p>
 
-            <h3>Service Providers</h3>
-            <p>We use trusted third-party services to operate our app:</p>
-            <ul>
-                <li><strong>Firebase (Google):</strong> Authentication, database, analytics</li>
-                <li><strong>Apple:</strong> Sign in with Apple authentication</li>
-                <li><strong>Pusher:</strong> Real-time notifications</li>
-                <li><strong>Google Maps:</strong> Journey map functionality</li>
-            </ul>
-            <p>These providers are bound by their own privacy policies and data protection obligations.</p>
-
             <h3>Legal Requirements</h3>
             <p>We may disclose information if required by law or to protect our rights and safety.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="emoji">🛠️</span> Third-Party Services We Use</h2>
+            <p>Together uses trusted third-party services to provide core functionality. Here's exactly what each service does:</p>
+
+            <table class="data-table">
+                <tr>
+                    <th>Service</th>
+                    <th>What It Does</th>
+                    <th>Data It Receives</th>
+                </tr>
+                <tr>
+                    <td><strong>Firebase Authentication</strong><br><span style="font-size:12px;color:#888;">by Google</span></td>
+                    <td>Handles login & account security</td>
+                    <td>Email, phone number, or social login tokens</td>
+                </tr>
+                <tr>
+                    <td><strong>Cloud Firestore</strong><br><span style="font-size:12px;color:#888;">by Google</span></td>
+                    <td>Stores your app data securely in the cloud</td>
+                    <td>All your Together data (moods, drawings, places)</td>
+                </tr>
+                <tr>
+                    <td><strong>Firebase Analytics</strong><br><span style="font-size:12px;color:#888;">by Google</span></td>
+                    <td>Helps us understand app usage patterns</td>
+                    <td>Anonymous usage data, crash reports</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple Sign-In</strong><br><span style="font-size:12px;color:#888;">by Apple</span></td>
+                    <td>Secure login with your Apple ID</td>
+                    <td>Apple user ID, optional name/email</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Sign-In</strong><br><span style="font-size:12px;color:#888;">by Google</span></td>
+                    <td>Login with your Google account</td>
+                    <td>Google user ID, email, name, profile photo</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Maps</strong><br><span style="font-size:12px;color:#888;">by Google</span></td>
+                    <td>Powers the Journey map feature</td>
+                    <td>Map tile requests (no personal data)</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple Push Notifications</strong><br><span style="font-size:12px;color:#888;">by Apple</span></td>
+                    <td>Delivers notifications to your iPhone</td>
+                    <td>Device push token, notification content</td>
+                </tr>
+            </table>
+
+            <div class="highlight">
+                <p>All third-party services we use are industry-standard, secure, and bound by their own privacy policies. We only share the minimum data required for each service to function.</p>
+            </div>
+
+            <h3>Links to Third-Party Privacy Policies</h3>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" style="color: #FF7B54;">Google Privacy Policy</a> (Firebase, Google Sign-In, Maps)</li>
+                <li><a href="https://www.apple.com/legal/privacy/" style="color: #FF7B54;">Apple Privacy Policy</a> (Sign in with Apple, Push Notifications)</li>
+            </ul>
         </div>
 
         <div class="card">
@@ -318,7 +553,7 @@
             <p>If you have questions about this Privacy Policy or our practices, please contact us:</p>
             <div class="contact-box">
                 <h3>Together Support</h3>
-                <p>Email: <a href="mailto:support@togetherapp.com">support@togetherapp.com</a></p>
+                <p>Email: <a href="mailto:info@dineopen.com">info@dineopen.com</a></p>
             </div>
         </div>
 
