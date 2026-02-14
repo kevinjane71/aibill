@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - NoteSnap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #FFF8F5 0%, #FFE8E0 50%, #FFF5F0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #F87171, #FB923C);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(248, 113, 113, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #6B7280;
+            font-size: 16px;
+        }
+
+        .contact-cta {
+            background: linear-gradient(135deg, #F87171, #FB923C);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 32px;
+            box-shadow: 0 8px 24px rgba(248, 113, 113, 0.3);
+        }
+
+        .contact-cta h2 {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .contact-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #F87171;
+            padding: 16px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #F87171;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            color: #1a1a1a;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            background: #FEF2F2;
+            color: #F87171;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #4B5563;
+            font-size: 15px;
+            padding-left: 34px;
+        }
+
+        .faq-answer ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 6px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #FEF2F2, #FFF7ED);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-title {
+            color: #1a1a1a;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .feature-desc {
+            color: #6B7280;
+            font-size: 13px;
+        }
+
+        .troubleshoot-item {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .troubleshoot-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .troubleshoot-title {
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .troubleshoot-solution {
+            color: #4B5563;
+            font-size: 14px;
+        }
+
+        .subscription-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .subscription-table th,
+        .subscription-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .subscription-table th {
+            background: #FEF2F2;
+            color: #F87171;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .subscription-table td {
+            color: #4B5563;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-green {
+            background: #D1FAE5;
+            color: #059669;
+        }
+
+        .badge-coral {
+            background: #FEE2E2;
+            color: #F87171;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+            border-left: 4px solid #22C55E;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+        }
+
+        .tip-box p {
+            color: #166534;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #9CA3AF;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #F87171;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+
+            .contact-cta {
+                padding: 30px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .subscription-table th,
+            .subscription-table td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">📝</span>
+            </div>
+            <h1>Support Center</h1>
+            <p class="subtitle">NoteSnap - Tap Snap Note</p>
+        </header>
+
+        <div class="contact-cta">
+            <h2>Need Help?</h2>
+            <p>Our support team is here to assist you with any questions or issues.</p>
+            <a href="mailto:info@dineopen.com" class="contact-email">info@dineopen.com</a>
+        </div>
+
+        <div class="card">
+            <h2>✨ App Features</h2>
+            <p>NoteSnap helps you capture ideas and turn them into actionable tasks instantly.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <div class="feature-title">Photo Capture</div>
+                    <div class="feature-desc">Snap whiteboards, notes, and documents</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <div class="feature-title">Voice Brain Dump</div>
+                    <div class="feature-desc">Speak your thoughts, get action items</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">AI Extraction</div>
+                    <div class="feature-desc">Automatically extract tasks from content</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <div class="feature-title">Smart Reminders</div>
+                    <div class="feature-desc">Gentle nudges to keep you on track</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Focus Mode</div>
+                    <div class="feature-desc">Pomodoro timer for deep work</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Progress Tracking</div>
+                    <div class="feature-desc">Track your productivity streaks</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I capture a whiteboard or note?</div>
+                <div class="faq-answer">
+                    Tap the <strong>Camera</strong> button on the home screen. Point your camera at the whiteboard or note, and tap to capture. Our AI will automatically extract any action items or tasks from the image.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is Brain Dump mode?</div>
+                <div class="faq-answer">
+                    Brain Dump is a voice recording feature that lets you speak your thoughts freely. Simply tap the microphone button and start talking. NoteSnap will transcribe your voice and automatically extract action items from what you said.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does Focus Mode work?</div>
+                <div class="faq-answer">
+                    Focus Mode is a Pomodoro-style timer that helps you concentrate on one task at a time. Choose your duration (5, 15, 25, or 45 minutes), and the app will guide you through focused work sessions with breaks in between.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I mark a task as complete?</div>
+                <div class="faq-answer">
+                    On the Actions screen, you can mark a task complete by:
+                    <ul>
+                        <li>Tapping the circular checkbox on the left</li>
+                        <li>Tapping the green checkmark button on the right</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use the app offline?</div>
+                <div class="faq-answer">
+                    Yes! NoteSnap works offline. Your captures and tasks are saved locally and will sync to the cloud when you're back online.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete a task?</div>
+                <div class="faq-answer">
+                    On the Actions screen, tap the X (close) button on any task card. You'll be asked to confirm before the task is permanently removed.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💎 Subscription Plans</h2>
+            <p>NoteSnap offers flexible subscription options to fit your needs:</p>
+
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Price</th>
+                        <th>Free Trial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Weekly</strong></td>
+                        <td>$1.99/week</td>
+                        <td><span class="badge badge-green">7 days free</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monthly</strong> <span class="badge badge-coral">Popular</span></td>
+                        <td>$4.99/month</td>
+                        <td><span class="badge badge-green">7 days free</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yearly</strong> <span class="badge badge-green">Best Value</span></td>
+                        <td>$29.99/year</td>
+                        <td><span class="badge badge-green">7 days free</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tip-box">
+                <p><strong>Tip:</strong> The yearly plan saves you 50% compared to monthly billing!</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <div class="faq-answer">
+                    Subscriptions are managed through Apple. To cancel:
+                    <ul>
+                        <li>Open the <strong>Settings</strong> app on your iPhone</li>
+                        <li>Tap your name at the top</li>
+                        <li>Tap <strong>Subscriptions</strong></li>
+                        <li>Find NoteSnap and tap <strong>Cancel Subscription</strong></li>
+                    </ul>
+                    Your subscription will remain active until the end of the current billing period.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my purchase on a new device?</div>
+                <div class="faq-answer">
+                    Open NoteSnap, go to the subscription screen, and tap <strong>"Restore"</strong> in the top right corner. Make sure you're signed in with the same Apple ID you used for the original purchase.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔧 Troubleshooting</h2>
+
+            <div class="troubleshoot-item">
+                <div class="troubleshoot-title">⚠️ Camera not working</div>
+                <div class="troubleshoot-solution">
+                    Go to <strong>Settings > NoteSnap > Camera</strong> and make sure camera access is enabled. If it's already enabled, try restarting the app.
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="troubleshoot-title">⚠️ Voice recording not working</div>
+                <div class="troubleshoot-solution">
+                    Go to <strong>Settings > NoteSnap > Microphone</strong> and ensure microphone access is enabled. Also check that your device is not on silent mode.
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="troubleshoot-title">⚠️ Tasks not syncing</div>
+                <div class="troubleshoot-solution">
+                    Check your internet connection. Pull down on the screen to refresh. If the issue persists, try signing out and back in from the Profile screen.
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="troubleshoot-title">⚠️ Notifications not appearing</div>
+                <div class="troubleshoot-solution">
+                    Go to <strong>Settings > NoteSnap > Notifications</strong> and make sure notifications are enabled. Also check that Do Not Disturb is not active.
+                </div>
+            </div>
+
+            <div class="troubleshoot-item">
+                <div class="troubleshoot-title">⚠️ AI not extracting tasks correctly</div>
+                <div class="troubleshoot-solution">
+                    For best results, ensure good lighting when capturing photos. For whiteboards, make sure the text is clear and legible. For voice, speak clearly and mention specific action items.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📱 System Requirements</h2>
+            <ul style="color: #4B5563; margin-left: 20px;">
+                <li><strong>iOS Version:</strong> iOS 15.0 or later</li>
+                <li><strong>Devices:</strong> iPhone, iPad</li>
+                <li><strong>Storage:</strong> Approximately 100 MB</li>
+                <li><strong>Internet:</strong> Required for sync and AI features (works offline for basic capture)</li>
+            </ul>
+        </div>
+
+        <div class="contact-cta">
+            <h2>Still Need Help?</h2>
+            <p>Can't find what you're looking for? Our support team typically responds within 24 hours.</p>
+            <a href="mailto:info@dineopen.com" class="contact-email">Contact Support</a>
+        </div>
+
+        <footer>
+            <p>© 2026 NoteSnap. All rights reserved.</p>
+            <p><a href="support-notesnap.html">Support</a> · <a href="privacy-notesnap.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
