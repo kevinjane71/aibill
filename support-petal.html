@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Petal Period Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFDDD2 50%, #FFB4A2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B8A, #FF8CAA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(255, 107, 138, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #3D2C2C;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8B6E6E;
+            font-size: 16px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #FF6B8A;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: #4B5563;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            color: #4B5563;
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF0E6, #FFDDD2);
+            border-left: 4px solid #FF6B8A;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #3D2C2C;
+            font-weight: 500;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #FFE0D0;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-q {
+            font-weight: 700;
+            color: #3D2C2C;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: #4B5563;
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #FF6B8A, #FFB4A2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .contact-box h2 {
+            color: #FFFFFF;
+            justify-content: center;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #FF6B8A;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 8px;
+            transition: transform 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #C4A090;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FF6B8A;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🌸</span>
+            </div>
+            <h1>Support</h1>
+            <p class="subtitle">Petal - Period Tracker</p>
+        </header>
+
+        <div class="card">
+            <h2>💡 Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-q">Is my data safe?</p>
+                <p class="faq-a">Absolutely. Petal is 100% offline. All your data is stored only on your device. We never collect, upload, or share any of your information. No one — including us — can access your data.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">What happens if I delete the app?</p>
+                <p class="faq-a">All your data will be permanently deleted since it's stored only on your device. We have no backup of your data. Make sure to back up your iPhone via iCloud or iTunes if you want to preserve your data.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">How do I restore my purchase on a new device?</p>
+                <p class="faq-a">Open Petal on your new device, go to Settings, and tap "Restore Purchase". Make sure you're signed in with the same Apple ID you used for the original purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">How accurate are the predictions?</p>
+                <p class="faq-a">Predictions are based on your logged cycle history and improve over time. The more cycles you track, the more accurate your predictions become. Note that Petal is not a medical device and should not be used for contraception.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">I forgot my passcode. What do I do?</p>
+                <p class="faq-a">Since Petal is completely offline, we cannot reset your passcode remotely. You will need to delete and reinstall the app, which will erase all data. We recommend using a passcode you'll remember.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">Does the app work without internet?</p>
+                <p class="faq-a">Yes! Petal works entirely offline. The only feature that requires internet is the In-App Purchase (handled by Apple). All tracking, logging, and predictions work without any internet connection.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">How do I get a refund?</p>
+                <p class="faq-a">Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" style="color: #FF6B8A;">reportaproblem.apple.com</a> to request a refund for your purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">Can I transfer my data to a new phone?</p>
+                <p class="faq-a">If you restore your new iPhone from an iCloud or iTunes backup, your Petal data should transfer automatically since it's stored in the app's local storage.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🌸 App Features</h2>
+            <ul>
+                <li><strong>Period Tracking:</strong> Log period start/end dates and flow intensity</li>
+                <li><strong>Smart Predictions:</strong> AI-powered cycle and ovulation forecasting</li>
+                <li><strong>Daily Logging:</strong> Track mood, symptoms, energy, and notes</li>
+                <li><strong>Calendar View:</strong> Visual timeline with color-coded cycle phases</li>
+                <li><strong>Streak System:</strong> Build healthy tracking habits with daily streaks</li>
+                <li><strong>Reminders:</strong> Customizable notifications for period and ovulation</li>
+                <li><strong>App Lock:</strong> Optional 4-digit passcode protection</li>
+                <li><strong>100% Private:</strong> All data stays on your device, always</li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h2>📧 Need More Help?</h2>
+            <p>Can't find what you're looking for? Reach out and we'll get back to you as soon as possible.</p>
+            <a href="mailto:info@dineopen.com" class="contact-email">info@dineopen.com</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Petal. All rights reserved.</p>
+            <p><a href="support-petal.html">Support</a> &middot; <a href="privacy-petal.html">Privacy Policy</a> &middot; <a href="terms-petal.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

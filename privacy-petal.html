@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Petal Period Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFDDD2 50%, #FFB4A2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B8A, #FF8CAA);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(255, 107, 138, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #3D2C2C;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8B6E6E;
+            font-size: 16px;
+        }
+
+        .last-updated {
+            background: #FFF0E6;
+            color: #FF6B8A;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #FF6B8A;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: #3D2C2C;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 0 12px;
+        }
+
+        p {
+            color: #4B5563;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            color: #4B5563;
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF0E6, #FFDDD2);
+            border-left: 4px solid #FF6B8A;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #3D2C2C;
+            font-weight: 500;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #FFE0D0;
+        }
+
+        .data-table th {
+            background: #FFF0E6;
+            color: #FF6B8A;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .data-table td {
+            color: #4B5563;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-green {
+            background: #D1FAE5;
+            color: #059669;
+        }
+
+        .badge-red {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .badge-none {
+            background: #E8F4FD;
+            color: #2563EB;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #FF6B8A, #FFB4A2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .contact-box h2 {
+            color: #FFFFFF;
+            justify-content: center;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #FF6B8A;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 8px;
+            transition: transform 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #C4A090;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FF6B8A;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🌸</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Petal - Period Tracker</p>
+            <span class="last-updated">Last Updated: March 2026</span>
+        </header>
+
+        <div class="card">
+            <h2>🌷 Welcome</h2>
+            <p>At Petal, your privacy isn't just important to us - it's the foundation of our app. Petal is a <strong>100% offline</strong> period and cycle tracker. Your most personal health data never leaves your device.</p>
+            <p>This Privacy Policy explains how Petal handles your information.</p>
+
+            <div class="highlight-box">
+                <p><strong>Our Promise:</strong> Petal is completely offline. We do NOT collect, store, transmit, or sell any of your data. Everything stays on your iPhone, always.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Information We Collect</h2>
+            <p><strong>Short answer: Nothing.</strong> Petal does not collect any personal data whatsoever.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Stored Where</th>
+                        <th>Sent to Servers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Period & Cycle Data</strong></td>
+                        <td>Your device only</td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mood & Symptoms</strong></td>
+                        <td>Your device only</td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flow & Energy Logs</strong></td>
+                        <td>Your device only</td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>App Settings</strong></td>
+                        <td>Your device only</td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Passcode (if set)</strong></td>
+                        <td>Your device only (hashed)</td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analytics / Tracking</strong></td>
+                        <td><span class="badge badge-none">Not collected</span></td>
+                        <td><span class="badge badge-red">Never</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🔒 Data Storage & Security</h2>
+            <p>All your data is stored <strong>locally on your device</strong> using secure on-device storage:</p>
+            <ul>
+                <li><strong>SQLite Database:</strong> Period logs, daily entries, and cycle data are stored in a local SQLite database on your iPhone</li>
+                <li><strong>AsyncStorage:</strong> App settings and preferences are stored locally</li>
+                <li><strong>No Cloud:</strong> There is no server, no cloud backup, and no account system</li>
+                <li><strong>No Network:</strong> Petal does not make any network requests (except for In-App Purchase via Apple's StoreKit)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>What this means:</strong> If you delete the app, all your data is permanently removed. There is no way to recover it because we never had a copy.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🚫 What We Do NOT Do</h2>
+            <p>We want to be absolutely clear:</p>
+            <ul>
+                <li><strong>No Data Collection:</strong> We collect zero personal data</li>
+                <li><strong>No Tracking:</strong> No analytics, no usage tracking, no device fingerprinting</li>
+                <li><strong>No Advertising:</strong> No ads, no ad networks, no ad tracking</li>
+                <li><strong>No Third-Party SDKs:</strong> No Firebase, no Amplitude, no Mixpanel, no tracking SDKs</li>
+                <li><strong>No Accounts:</strong> No sign-up, no login, no email collection</li>
+                <li><strong>No Server Communication:</strong> The app works entirely offline</li>
+                <li><strong>No Data Sharing:</strong> We cannot share what we don't have</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🛒 In-App Purchases</h2>
+            <p>Petal offers an optional one-time In-App Purchase to unlock all features after the free trial period. This purchase is processed entirely by <strong>Apple's App Store</strong>:</p>
+            <ul>
+                <li>Payment is handled by Apple - we never see your payment details</li>
+                <li>Purchase status is stored locally on your device</li>
+                <li>We do not receive any personal financial information</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🔔 Notifications</h2>
+            <p>Petal can send you local notifications to remind you about upcoming periods and ovulation:</p>
+            <ul>
+                <li>All notifications are <strong>local</strong> - they are scheduled on your device, not sent from a server</li>
+                <li>No push notification service or token is involved</li>
+                <li>You can disable notifications at any time in the app settings or iOS Settings</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>👶 Children's Privacy</h2>
+            <p>Petal is designed for individuals who menstruate, typically ages 12 and older. Since we do not collect any data whatsoever, there is no risk of collecting children's personal information. However, this app is not targeted at children under 13.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌍 Your Rights</h2>
+            <p>Since Petal does not collect, store, or process any personal data on our servers, traditional data rights (access, correction, deletion, portability) are handled directly by you on your device:</p>
+            <ul>
+                <li><strong>Access:</strong> All your data is visible within the app</li>
+                <li><strong>Deletion:</strong> Delete the app to remove all data, or use "Delete All Data" in Settings</li>
+                <li><strong>Portability:</strong> Your data lives on your device and is under your control</li>
+            </ul>
+            <p>If you have any questions about your privacy, please contact us below.</p>
+        </div>
+
+        <div class="card">
+            <h2>🔄 Policy Updates</h2>
+            <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul>
+                <li>We will update the "Last Updated" date at the top of this page</li>
+                <li>Significant changes will be communicated through an app update</li>
+            </ul>
+            <p>Our core commitment to being 100% offline and collecting zero data will not change.</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>📧 Contact Us</h2>
+            <p>Have questions about your privacy? We're here to help.</p>
+            <a href="mailto:info@dineopen.com" class="contact-email">info@dineopen.com</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Petal. All rights reserved.</p>
+            <p><a href="support-petal.html">Support</a> &middot; <a href="privacy-petal.html">Privacy Policy</a> &middot; <a href="terms-petal.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>
