@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Invoice Maker - AI Billing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.3);
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #1E3A5F;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .app-name {
+            color: #1E40AF;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 16px rgba(30, 64, 175, 0.08);
+        }
+
+        h2 {
+            color: #1E40AF;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #DBEAFE;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            color: #334155;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        ul {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            color: #334155;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .highlight {
+            background: #EFF6FF;
+            border-left: 4px solid #1E40AF;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #1E3A5F;
+            font-weight: 500;
+        }
+
+        .faq-item {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 1px solid #E2E8F0;
+        }
+
+        .faq-question {
+            color: #1E40AF;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: #ffffff;
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .contact-box p {
+            color: #E0EAFF;
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: #BFDBFE;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .contact-box a:hover {
+            color: #ffffff;
+        }
+
+        .email-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff !important;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 16px;
+            transition: background 0.3s;
+        }
+
+        .email-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #64748B;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">📄</span>
+            </div>
+            <h1>Support Center</h1>
+            <p class="app-name">Invoice Maker - AI Billing</p>
+        </header>
+
+        <div class="content">
+            <h2>How Can We Help?</h2>
+            <p>We're here to help you get the most out of Invoice Maker. Browse the frequently asked questions below or contact us directly for personalized support.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I create my first invoice?</p>
+                <p class="faq-answer">Tap the "+" button on the Invoices tab. Fill in your client details, add line items with descriptions, quantities, and rates, then preview and share your invoice as a PDF. You can also use our AI Voice-to-Invoice feature — just describe your invoice by speaking!</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How does the AI Voice-to-Invoice feature work?</p>
+                <p class="faq-answer">Tap the AI button and select voice mode. Simply describe your invoice naturally, for example: "5 hours of web design at $150 per hour for Acme Corp." Our AI will automatically create the invoice with the correct client, items, and amounts.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I convert an estimate to an invoice?</p>
+                <p class="faq-answer">Yes! Open any estimate and tap "Convert to Invoice." All the details from your estimate will be automatically transferred to a new invoice.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I change my business logo?</p>
+                <p class="faq-answer">Go to Settings > Business Profile > tap the logo area. You can take a photo or choose an image from your photo library. Your logo will appear on all invoices and estimates.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I track partial payments?</p>
+                <p class="faq-answer">Yes! Open any sent invoice and tap "Record Payment." You can log partial payments with dates. The app will automatically calculate the remaining balance and update the invoice status.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I change the invoice template?</p>
+                <p class="faq-answer">When creating or editing an invoice, tap "Choose Template" to browse available designs. You can also set a default template in Settings. Free users have access to 4 templates, and premium users unlock all 6.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I use a different currency?</p>
+                <p class="faq-answer">Yes! The app supports 140+ currencies. Go to Settings to change your default currency, or select a specific currency when creating individual invoices.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I share or send an invoice?</p>
+                <p class="faq-answer">Open any invoice and tap the Share button. You can send your invoice as a professional PDF via Email, Messages, WhatsApp, AirDrop, or any other sharing method on your device. You can also download or print directly.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">What's included in the Premium subscription?</p>
+                <p class="faq-answer">Premium unlocks unlimited invoices (free tier: 5/month), all 6 professional templates, AI Voice-to-Invoice, advanced reports, and more. We offer Monthly ($4.99/mo), Yearly ($39.99/yr), and Lifetime ($79.99) plans.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I cancel my subscription?</p>
+                <p class="faq-answer">Subscriptions are managed through your Apple ID. Go to your device's Settings > Apple ID > Subscriptions, find Invoice Maker, and tap "Cancel Subscription." You'll continue to have access until the end of your billing period.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Is my data safe?</p>
+                <p class="faq-answer">Yes! Your invoices, client data, and business information are stored locally on your device. Voice recordings for AI features are processed securely and are not permanently stored. We also mask sensitive information before any AI processing.</p>
+            </div>
+
+            <h2>Troubleshooting</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">The app is running slowly</p>
+                <p class="faq-answer">Try closing and reopening the app. Make sure your device has sufficient storage space available. If the issue persists, try restarting your device.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">PDF is not generating</p>
+                <p class="faq-answer">Ensure your invoice has at least one line item and a client selected. If the problem continues, try creating a new invoice and transferring your details.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Voice-to-Invoice is not working</p>
+                <p class="faq-answer">Make sure you've granted microphone permission in your device Settings > Invoice Maker > Microphone. Also check that you have an active internet connection, as the AI processing requires connectivity.</p>
+            </div>
+
+            <div class="contact-box">
+                <h2>Still Need Help?</h2>
+                <p>Our support team typically responds within 24 hours.</p>
+                <a href="mailto:info@dineopen.com" class="email-btn">Email Us: info@dineopen.com</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Invoice Maker - AI Billing. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
